@@ -13,7 +13,7 @@ pipeline {
                 stage ('Deploy') {
                 agent {label 'slave02'}
                 steps {
-                  sh 'cp -r /home/ec2-user/.m2/repository/com/efsavage/hello-world-war/1.0.0/hello-world-war-1.0.0.war /homr/ec2-user/
+                  sh 'cp -r /home/ec2-user/.m2/repository/com/datica/java-war-deploy-example/0.1-SNAPSHOT/java-war-deploy-example-0.1-SNAPSHOT.pom /homr/ec2-user/
                   echo "deploy is success"
                 }
            }
