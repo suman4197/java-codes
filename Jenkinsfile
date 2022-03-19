@@ -4,8 +4,8 @@ pipeline {
             stage ('Build') {
                 agent {label 'slave01'}
                 steps {
-                   git branch: 'main', url: 'https://github.com/harishh1265/java-codes.git'
-                    sh 'mvn clean install'
+                   git branch: 'main', url: 'https://github.com/suman4197/java-codes.git'
+                   sh 'mvn clean install'
                   echo "build is success"
                 }
             }
@@ -13,7 +13,7 @@ pipeline {
            stage ('Deploy') {
                 agent {label 'slave01'}
                 steps {
-                    sh 'cp -r /home/ec2-user/.m2/repository/com/efsavage/hello-world-war/1.0.0/hello-world-war-1.0.0.war /homr/ec2-user/
+                   sh 'cp -r /home/ec2-user/.m2/repository/com/efsavage/hello-world-war/1.0.0/hello-world-war-1.0.0.war /homr/ec2-user/'
                   echo "deploy is success"
                 }
            }
