@@ -13,7 +13,7 @@ pipeline {
            stage ('Deploy') {
                 agent {label 'slave01'}
                 steps {
-                   sh 'cp -r /home/ec2-user/.m2/repository/com/efsavage/hello-world-war/1.0.0/hello-world-war-1.0.0.war /homr/ec2-user/test1'
+                   sh 'cp -r /home/ec2-user/.m2/repository/com/efsavage/hello-world-war/1.0.0/hello-world-war-1.0.0.war /home/ec2-user/test1'
                   echo "deploy is success"
                 }
            }
